@@ -1,5 +1,6 @@
 package fr.florent.lwjgl.shape;
 
+import fr.florent.lwjgl.utils.LwjglSizeConverter;
 import fr.florent.lwjgl.utils.Point;
 import fr.florent.lwjgl.window.Window;
 
@@ -42,8 +43,10 @@ public class CircleShape extends Shape {
 
         glVertex2d(x, y);
         for (double i = 0.0; i <= 360; i += 360f / precision) {
-            double xAbsolute = (double) radius / window.getProperty().getWidth() * Math.cos(Math.PI * i / 180);
-            double yAbsolute = (double) radius / window.getProperty().getHeight() * Math.sin(Math.PI * i / 180);
+            double xAbsolute = LwjglSizeConverter.convertLengthToLwjgl(radius, window.getProperty().getWidth())
+                    * Math.cos(Math.PI * i / 180);
+            double yAbsolute = LwjglSizeConverter.convertLengthToLwjgl(radius, window.getProperty().getHeight())
+                    * Math.sin(Math.PI * i / 180);
 
             glVertex2d(xAbsolute + x, yAbsolute + y);
         }

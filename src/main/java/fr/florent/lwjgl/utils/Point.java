@@ -11,15 +11,12 @@ public class Point {
         this.y = y;
     }
 
-    private double getValue(int value, int size) {
-        return (double) value / size;
-    }
 
     public double getX(Window window) {
-        return getValue(x, window.getProperty().getWidth() / 2);
+        return LwjglSizeConverter.convertPositionToLwjgl(x, window.getProperty().getWidth());
     }
 
     public double getY(Window window) {
-        return getValue(y, window.getProperty().getHeight() / 2);
+        return LwjglSizeConverter.convertPositionToLwjgl(y, window.getProperty().getHeight());
     }
 }
