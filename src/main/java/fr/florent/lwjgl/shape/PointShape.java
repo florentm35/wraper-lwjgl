@@ -8,9 +8,9 @@ import static org.lwjgl.opengl.GL11.*;
 
 public class PointShape extends Shape {
 
-    private final ColorShape color;
-    private final Point point;
-    private final int size;
+    private ColorShape color;
+    private Point point;
+    private int size;
 
     public PointShape(ColorShape color, Point point, int size) {
         this.color = color;
@@ -33,5 +33,29 @@ public class PointShape extends Shape {
 
         glEnd();
 
+    }
+
+    public ColorShape getColor() {
+        return color;
+    }
+
+    public void setColor(ColorShape color) {
+        this.color = color;
+    }
+
+    public Point getPoint() {
+        return point;
+    }
+
+    public void setPoint(Point point) {
+        this.point = point;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
     }
 }

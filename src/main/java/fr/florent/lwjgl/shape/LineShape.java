@@ -18,13 +18,13 @@ public class LineShape {
         this(color, begin, end, 1);
     }
 
-    private final ColorShape color;
+    private ColorShape color;
 
-    private final Point begin;
+    private Point begin;
 
-    private final Point end;
+    private Point end;
 
-    private final int size;
+    private int size;
 
     public void render(Window window) {
         color.render(window);
@@ -37,4 +37,35 @@ public class LineShape {
         glEnd();
     }
 
+    public ColorShape getColor() {
+        return color;
+    }
+
+    public void setColor(ColorShape color) {
+        this.color = color;
+    }
+
+    public Point getBegin() {
+        return begin;
+    }
+
+    public void setBegin(Point begin) {
+        this.begin = begin;
+    }
+
+    public Point getEnd() {
+        return end;
+    }
+
+    public void setEnd(Point end) {
+        this.end = end;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
 }

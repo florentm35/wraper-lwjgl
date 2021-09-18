@@ -4,7 +4,7 @@ import fr.florent.lwjgl.window.Window;
 
 
 public class Point {
-    private final int x, y;
+    private int x, y;
 
     public Point(int x, int y) {
         this.x = x;
@@ -18,5 +18,21 @@ public class Point {
 
     public double getY(Window window) {
         return LwjglSizeConverter.convertPositionToLwjgl(y, window.getProperty().getHeight());
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
     }
 }

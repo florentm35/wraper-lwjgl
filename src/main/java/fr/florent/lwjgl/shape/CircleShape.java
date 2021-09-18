@@ -23,9 +23,9 @@ public class CircleShape extends Shape {
         this.precision = precision;
     }
 
-    private final ColorShape color;
-    private final Point center;
-    private final int radius;
+    private ColorShape color;
+    private Point center;
+    private int radius;
 
     private int precision = 360;
 
@@ -53,5 +53,38 @@ public class CircleShape extends Shape {
 
         glEnd();
 
+    }
+
+
+    public ColorShape getColor() {
+        return color;
+    }
+
+    public void setColor(ColorShape color) {
+        this.color = color;
+    }
+
+    public Point getCenter() {
+        return center;
+    }
+
+    public void setCenter(Point center) {
+        this.center = center;
+    }
+
+    public int getRadius() {
+        return radius;
+    }
+
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+
+    public int getPrecision() {
+        return precision;
+    }
+
+    public void setPrecision(int precision) {
+        this.precision = precision;
     }
 }

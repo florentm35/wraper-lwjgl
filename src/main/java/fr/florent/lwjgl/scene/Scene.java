@@ -9,26 +9,29 @@ import java.util.List;
 
 public abstract class Scene {
 
-    private final List<Shape> lstShape =  Collections.synchronizedList(new ArrayList<Shape>());
+    private final List<Shape> lstShape = Collections.synchronizedList(new ArrayList<Shape>());
 
     public abstract void update();
 
-    public void onInit(){
+    public void onInit() {
 
     }
 
-    public void render(Window window){
-        for (Shape shape:lstShape) {
+    public void render(Window window) {
+        for (Shape shape : lstShape) {
             shape.render(window);
         }
     }
 
-    public void addShape(Shape shape){
+    public void addShape(Shape shape) {
         lstShape.add(shape);
     }
 
-    public void removeShape(Shape shape){
+    public void removeShape(Shape shape) {
         lstShape.remove(shape);
     }
 
+    public void clearShape() {
+        lstShape.clear();
+    }
 }

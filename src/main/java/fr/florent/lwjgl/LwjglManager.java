@@ -49,8 +49,6 @@ public class LwjglManager {
         window.showWindow();
 
         GL.createCapabilities();
-
-        // Set the clear color
         glClearColor(1.0f, 1.0f, 1.0f, 0.0f);
 
         scene.onInit();
@@ -63,9 +61,13 @@ public class LwjglManager {
 
             glfwSwapBuffers(window.getHandlerId()); // swap the color buffers
 
+
+
             // Poll for window events. The key callback above will only be
             // invoked during this call.
             glfwPollEvents();
+
+
 
         } while (!window.getEnd().get());
 
