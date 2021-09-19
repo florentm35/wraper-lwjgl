@@ -4,7 +4,7 @@ public class LwjglSizeConverter {
 
 
     public static double convertPositionToLwjgl(int position, int size) {
-        return ((double) position - (double) size / 2) / size;
+        return ((double) position - (double) size ) / size;
     }
 
     public static int convertPositionFromLwjgl(double position, int size) {
