@@ -42,3 +42,20 @@ public static void main(String[] args) {
 
 }
  ```
+
+Finaly create you scene
+```java
+public class MainScene extends Scene {
+
+    @Override
+    public void onInit() {
+        // Call before launch
+    }
+    
+    @Override
+    public void update() {
+
+        // Update shape here
+
+    }
+}```
