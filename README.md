@@ -60,3 +60,22 @@ public class MainScene extends Scene {
     }
 }
 ```
+
+## Scene
+
+// explain addShap, onInit and update methode
+
+## Shape available
+
+// list all shap available
+
+## todo
+
+- add more windows config
+- add fps limiter
+- add windows getter from scene
+- add more basic shap
+- add more property to existing shap
+- refactor event key
+- to add scene event
+- implement other lwjgl event
